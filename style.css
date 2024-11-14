@@ -1,288 +1,145 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 20px;
-    font-size: 15px;
-  }
-  html {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-  }
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
-  .layar-dalam {
-    width: 1000px;
-    margin: auto;
-  }
-  .layar-penuh {
-    width: 100%;
-  }
-  nav {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    border-bottom: 1px solid #b1b1b1;
-    line-height: 60px;
-    width: 100%;
-    transition: background-color 0.5s ease;
-  }
-  nav.putih {
-    background-color: #fff;
-  }
-  nav .logo {
-    float: left;
-    position: relative;
-    line-height: 55px;
-    text-align: center;
-  }
-  nav .logo img {
-    vertical-align: middle;
-    width: 120px;
-  }
-  
-  nav .menu {
-    float: right;
-    height: 60px;
-    max-width: 600px;
-  }
-  
-  nav .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav .menu ul li {
-    list-style-type: none;
-    float: left;
-    line-height: 60px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* pengaturan header */
-  header {
-    position: relative;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+#hero {
     height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 2;
-  }
-  header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -2;
-  }
-  header .intro {
-    z-index: 100;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('hero-background.jpg') no-repeat center center/cover;
     position: relative;
-    top: 50%;
-  }
-  header .intro h3 {
-    font-size: 50px;
-    margin: 0;
-    padding: 0;
-  }
-  .tombol {
-    background-color: #c86b85;
-    height: 40px;
-    line-height: 42px;
-    color: #fff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffd700;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.hero-text span {
+    color: #ffd700;
+}
+
+.btn {
+    background: #333;
+    color: white;
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
     text-decoration: none;
-    display: inline-block;
-    padding: 0px 20px 0px 20px;
-    font-size: 15px;
-    border-radius: 4px;
-  }
-  header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 50%;
-    z-index: -1;
-  }
-  .tombol-menu {
-    position: absolute;
-    top: 1.7rem;
-    right: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ffd700;
+    color: #333;
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    padding: 3em 1.5em;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-text ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Project Section */
+#projects {
+    text-align: center;
+    padding: 2em;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.project-card {
+    width: 280px;
+    background: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    width: 30px;
-    height: 20px;
-  }
-  .tombol-menu .garis {
-    height: 3px;
-    background-color: #fff;
-  }
-  section {
-    padding: 50px 0px 50px 0px;
-  }
-  section h3 {
-    font-size: 30px;
-  }
-  section h3::after {
-    content: "";
-    border-bottom: 5px solid #c86b85;
-    width: 52px;
-    display: block;
-    margin: 20px auto;
-  }
-  #aboutus,
-  #blog {
-    text-align: center;
-  }
-  .blog{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  section p.ringkasan {
-    font-style: italic;
-    font-size: 18px;
-    color: #ababab;
-  }
-  section .konten-isi p {
-    font-style: normal;
-  }
-  nav.putih {
-    background-color: #fff;
-  }
-  nav.putih .tombol-menu .garis {
-    background-color: #333;
-  }
-  nav.putih ul li a {
-    color: #333;
-  }
-  nav .logo img.hitam {
-    display: none;
-  }
-  section.quote {
-    background: url("aset foto/bacroad\ alun2.jpeg") no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-style: italic;
-    padding: 100px;
-  }
-  .blog .area {
-    width: 47%;
-    box-shadow: 0px -10px 30px #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .blog div.area div {
-    width: 50%;
-  }
-  .blog .area .gambar {
-    border-radius: 5px 0px 0px 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-  }
-  .blog .area .text article {
-    padding: 40px;
-  }
-  .blog .area .text article h4 {
-    margin: 0px;
-  }
-  .blog .area .text article a {
-    color: #333;
+}
+
+.project-card img {
+    width: 100%; 
+    max-height: 150px;
+    height: auto; 
+    border-radius: 8px; 
+    margin-top: 1em; 
+}
+
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Section */
+#contact a {
+    color: #ffd700;
     text-decoration: none;
-    transition: color 0.5s ease;
-  }
-  .blog .area .text article a:hover {
-    color: #ccc;
-  }
-  footer {
-    padding: 50px 0px 50px 0px;
-    background-color: #343a40;
-    color: #fff;
-  }
-  footer .layar-dalam {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  footer .layar-dalam div {
-    width: 20%;
-  }
-  footer .layar-dalam h5 {
-    margin-top: 0px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  footer .layar-dalam .copyright {
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #666;
-    text-align: center;
-  }
-  @media screen and (max-width: 991.98px) {
-    .layar-dalam {
-      width: 90%;
-    }
-    nav .menu ul {
-      display: none;
-      margin-top: 60px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-    nav .menu ul li {
-      width: 100%;
-      border-bottom: 1px solid #ccc;
-      background-color: #fff;
-      line-height: 40px;
-    }
-    nav .menu ul li a {
-      color: #333;
-    }
-    .tombol-menu {
-      display: flex;
-    }
-    .blog .area {
-      display: block;
-    }
-    .blog div.area div {
-      width: 100%;
-    }
-    .blog .area .gambar {
-      border-radius: 5px 5px 0px 0px;
-      height: 200px;
-    }
-    .support {
-      display: block;
-    }
-    .support div {
-      width: 100%;
-      padding-bottom: 30px;
-    }
-  }
+    cursor: pointer;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
